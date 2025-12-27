@@ -1,0 +1,30 @@
+ABOUT:
+    BIO:
+    Highlights (3 bullet points):
+    Current Focus:
+
+Projects:
+    Project1:
+        title:
+        description:
+        tech stack:
+        github url:
+    Project2:
+        title:
+        description:
+        tech stack:
+        github url:
+    Project3:
+        title:
+        description:
+        tech stack:
+        github url:
+
+SKILLS:
+    Languages:
+    Front-End:
+    Back-End:
+    Tools:
+        Docker
+        Linux
+        Github
