@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -11,28 +12,32 @@ const ProjectCard = ({ project }) => {
       className="group relative bg-dark-secondary rounded-lg overflow-hidden border border-dark-accent hover:border-primary-500/50 transition-all duration-300"
     >
       {/* Project Image */}
-      <div className="relative overflow-hidden aspect-video">
-        {project.image ? (
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-          />
-        ) : (
-          <div className="w-full h-full bg-dark-accent flex items-center justify-center">
-            <span className="text-gray-500 text-4xl font-bold">{project.title[0]}</span>
-          </div>
-        )}
+      <Link to={`/project/${project.id}`}>
+        <div className="relative overflow-hidden aspect-video cursor-pointer bg-dark-accent">
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <div className="w-full h-full bg-dark-accent flex items-center justify-center">
+              <span className="text-gray-500 text-4xl font-bold">{project.title[0]}</span>
+            </div>
+          )}
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-      </div>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+        </div>
+      </Link>
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-500 transition-colors">
-          {project.title}
-        </h3>
+        <Link to={`/project/${project.id}`}>
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-500 transition-colors cursor-pointer">
+            {project.title}
+          </h3>
+        </Link>
         <p className="text-gray-400 text-sm mb-4 line-clamp-2">
           {project.description}
         </p>

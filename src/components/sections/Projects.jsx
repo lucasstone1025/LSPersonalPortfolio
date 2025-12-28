@@ -8,10 +8,6 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>My Projects</SectionTitle>
 
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
-          Here are some of the projects I've built to learn and grow as a developer.
-          Each project represents a step forward in my journey.
-        </p>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

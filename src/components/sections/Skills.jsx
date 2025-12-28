@@ -16,10 +16,6 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Skills & Technologies</SectionTitle>
 
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-          Technologies and tools I work with to bring ideas to life.
-        </p>
-
         {/* Skills Categories */}
         <div className="space-y-16">
           {categories.map((category, categoryIndex) => (

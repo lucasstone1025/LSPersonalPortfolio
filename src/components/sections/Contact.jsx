@@ -24,21 +24,17 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // TODO: Replace with your EmailJS credentials
-      // await emailjs.send(
-      //   'YOUR_SERVICE_ID',
-      //   'YOUR_TEMPLATE_ID',
-      //   {
-      //     from_name: data.name,
-      //     from_email: data.email,
-      //     subject: data.subject || 'Portfolio Contact',
-      //     message: data.message,
-      //   },
-      //   'YOUR_PUBLIC_KEY'
-      // );
-
-      // For now, simulate successful submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          subject: data.subject || 'Portfolio Contact',
+          message: data.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
       setSubmitStatus('success');
       reset();
@@ -71,8 +67,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
               <p className="text-gray-300 mb-8">
-                Whether you have a question, want to discuss a project, or just want to say hi,
-                my inbox is always open.
+                My inbox is always open for further contact. Thanks for visiting my Portfolio page!
               </p>
             </div>
 
@@ -99,7 +94,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
-                  <p className="text-white">Your City, Country</p>
+                  <p className="text-white">Jacksonville, Florida</p>
                 </div>
               </div>
             </div>
@@ -228,11 +223,6 @@ const Contact = () => {
                   </p>
                 </div>
               )}
-
-              {/* Note about EmailJS setup */}
-              <p className="text-gray-500 text-sm text-center">
-                Note: EmailJS integration needs to be configured with your credentials.
-              </p>
             </form>
           </motion.div>
         </div>
