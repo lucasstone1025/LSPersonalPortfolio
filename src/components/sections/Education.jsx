@@ -2,11 +2,15 @@ import { motion } from 'framer-motion';
 import SectionTitle from '../ui/SectionTitle';
 import { educationData } from '../../data/education';
 import { HiAcademicCap, HiLocationMarker, HiCalendar, HiStar, HiBadgeCheck } from 'react-icons/hi';
+import EarthElement from '../backgrounds/EarthElement';
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-dark-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-20 bg-dark-bg/60 backdrop-blur-sm relative overflow-hidden">
+      {/* Earth Element */}
+      <EarthElement position="bottom-right" size="small" glowColor="primary-500" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle>Education</SectionTitle>
 
         <div className="max-w-4xl mx-auto">
@@ -16,7 +20,7 @@ const Education = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-dark-secondary rounded-2xl border border-dark-accent p-8 mb-8"
+            className="bg-dark-secondary/90 backdrop-blur-sm rounded-2xl border border-dark-accent p-8 mb-8"
           >
             {/* Header */}
             <div className="flex items-start gap-4 mb-6">

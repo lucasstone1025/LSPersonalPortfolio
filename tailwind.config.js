@@ -19,6 +19,14 @@ export default {
         accent: {
           purple: '#a855f7',
           cyan: '#06b6d4',
+        },
+        nebula: {
+          pink: '#FF69B4',
+          magenta: '#E91E63',
+          orange: '#FF6B35',
+          coral: '#FF8C42',
+          red: '#E63946',
+          rose: '#F72585',
         }
       },
       fontFamily: {

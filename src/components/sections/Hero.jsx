@@ -1,22 +1,30 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import Button from '../ui/Button';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 import { socialLinks } from '../../data/social';
+import EarthElement from '../backgrounds/EarthElement';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-dark-secondary to-dark-bg">
-        <div className="absolute inset-0 opacity-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 bg-dark-bg/40 backdrop-blur-sm">
+      {/* Animated Background - Now semi-transparent to show stars */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 opacity-40">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-purple rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-nebula-pink rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-nebula-orange rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-72 h-72 bg-nebula-coral rounded-full blur-3xl"></div>
+          <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-nebula-magenta rounded-full blur-3xl"></div>
+          <div className="absolute top-2/3 left-2/3 w-56 h-56 bg-accent-cyan rounded-full blur-3xl"></div>
         </div>
       </div>
 
+      {/* Earth Element */}
+      <EarthElement position="bottom-right" size="large" glowColor="nebula-pink" />
+
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -24,16 +32,18 @@ const Hero = () => {
         >
           <motion.h1
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6"
+            style={{ textShadow: '0 4px 30px rgba(0, 0, 0, 1), 0 2px 15px rgba(0, 0, 0, 0.9)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="text-white">Hi, I'm </span>
-            <span className="text-gradient">Lucas Stone</span>
+            <span className="text-white">Lucas Stone</span>
           </motion.h1>
 
           <motion.p
             className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4"
+            style={{ textShadow: '0 2px 20px rgba(0, 0, 0, 1), 0 1px 10px rgba(0, 0, 0, 0.9)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -42,7 +52,8 @@ const Hero = () => {
           </motion.p>
 
           <motion.p
-            className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mb-12"
+            className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-12"
+            style={{ textShadow: '0 2px 15px rgba(0, 0, 0, 1)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -51,7 +62,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -62,6 +73,25 @@ const Hero = () => {
             <Link to="contact" smooth={true} duration={500} offset={-64}>
               <Button variant="secondary">Get In Touch</Button>
             </Link>
+          </motion.div>
+
+          {/* Download CV Button */}
+          <motion.div
+            className="flex justify-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
+            <a
+              href="/resume.pdf"
+              download="Lucas_Stone_Resume.pdf"
+              className="inline-block"
+            >
+              <Button variant="ghost" className="flex items-center gap-2">
+                <FaDownload />
+                Download CV
+              </Button>
+            </a>
           </motion.div>
 
           {/* Social Links */}

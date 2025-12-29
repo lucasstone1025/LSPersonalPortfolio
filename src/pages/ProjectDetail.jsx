@@ -45,7 +45,7 @@ const ProjectDetail = () => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-contain"
+              className={`w-full h-full ${project.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center">

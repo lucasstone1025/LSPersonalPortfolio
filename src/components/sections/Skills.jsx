@@ -12,8 +12,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-dark-secondary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-20 bg-dark-secondary/60 backdrop-blur-sm relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle>Skills & Technologies</SectionTitle>
 
         {/* Skills Categories */}

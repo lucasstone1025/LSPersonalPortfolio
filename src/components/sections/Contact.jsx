@@ -7,6 +7,7 @@ import Button from '../ui/Button';
 import { HiMail, HiLocationMarker } from 'react-icons/hi';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { socialLinks } from '../../data/social';
+import EarthElement from '../backgrounds/EarthElement';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,8 +48,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-dark-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-dark-bg/60 backdrop-blur-sm relative overflow-hidden">
+      {/* Earth Element */}
+      <EarthElement position="top-left" size="medium" glowColor="nebula-orange" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle>Get In Touch</SectionTitle>
 
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
@@ -106,7 +110,6 @@ const Contact = () => {
                 {[
                   { icon: FaGithub, url: socialLinks.github, label: 'GitHub' },
                   { icon: FaLinkedin, url: socialLinks.linkedin, label: 'LinkedIn' },
-                  { icon: FaTwitter, url: socialLinks.twitter, label: 'Twitter' },
                 ].map((social) => (
                   <a
                     key={social.label}
@@ -129,6 +132,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="backdrop-blur-sm bg-dark-secondary/80 p-8 rounded-2xl border border-dark-accent"
           >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               {/* Name */}
@@ -140,7 +144,7 @@ const Contact = () => {
                   id="name"
                   type="text"
                   {...register('name', { required: 'Name is required' })}
-                  className="w-full px-4 py-3 bg-dark-secondary border border-dark-accent rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 bg-dark-secondary border border-dark-accent rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-nebula-coral transition-colors"
                   placeholder="Your Name"
                 />
                 {errors.name && (
@@ -163,7 +167,7 @@ const Contact = () => {
                       message: 'Invalid email address',
                     },
                   })}
-                  className="w-full px-4 py-3 bg-dark-secondary border border-dark-accent rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 bg-dark-secondary border border-dark-accent rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-nebula-coral transition-colors"
                   placeholder="your.email@example.com"
                 />
                 {errors.email && (
@@ -180,7 +184,7 @@ const Contact = () => {
                   id="subject"
                   type="text"
                   {...register('subject')}
-                  className="w-full px-4 py-3 bg-dark-secondary border border-dark-accent rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 bg-dark-secondary border border-dark-accent rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-nebula-coral transition-colors"
                   placeholder="What's this about?"
                 />
               </div>
@@ -194,7 +198,7 @@ const Contact = () => {
                   id="message"
                   rows="5"
                   {...register('message', { required: 'Message is required' })}
-                  className="w-full px-4 py-3 bg-dark-secondary border border-dark-accent rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-dark-secondary border border-dark-accent rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-nebula-coral transition-colors resize-none"
                   placeholder="Your message..."
                 />
                 {errors.message && (

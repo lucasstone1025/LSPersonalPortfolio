@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="group relative bg-dark-secondary rounded-lg overflow-hidden border border-dark-accent hover:border-primary-500/50 transition-all duration-300"
+      className="group relative bg-dark-secondary rounded-lg overflow-hidden border border-dark-accent hover:border-nebula-pink/50 hover:shadow-lg hover:shadow-nebula-pink/20 transition-all duration-300"
     >
       {/* Project Image */}
       <Link to={`/project/${project.id}`}>
@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              className={`w-full h-full ${project.imageFit === 'contain' ? 'object-contain group-hover:scale-105' : 'object-cover group-hover:scale-110'} transition-transform duration-300`}
             />
           ) : (
             <div className="w-full h-full bg-dark-accent flex items-center justify-center">
@@ -32,9 +32,9 @@ const ProjectCard = ({ project }) => {
       </Link>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 backdrop-blur-sm bg-dark-secondary/95">
         <Link to={`/project/${project.id}`}>
-          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-500 transition-colors cursor-pointer">
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-nebula-pink transition-colors cursor-pointer">
             {project.title}
           </h3>
         </Link>
@@ -75,7 +75,7 @@ const ProjectCard = ({ project }) => {
               className="flex items-center gap-2 text-gray-400 hover:text-accent-cyan transition-colors"
             >
               <FaExternalLinkAlt className="text-sm" />
-              <span className="text-sm">Live Demo</span>
+              <span className="text-sm">Live Website</span>
             </a>
           )}
         </div>

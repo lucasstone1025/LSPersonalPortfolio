@@ -2,11 +2,15 @@ import { motion } from 'framer-motion';
 import SectionTitle from '../ui/SectionTitle';
 import { aboutData } from '../../data/about';
 import { HiCheckCircle } from 'react-icons/hi';
+import EarthElement from '../backgrounds/EarthElement';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-dark-secondary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-dark-secondary/60 backdrop-blur-sm relative overflow-hidden">
+      {/* Earth Element */}
+      <EarthElement position="top-left" size="medium" glowColor="nebula-coral" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle>About Me</SectionTitle>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

@@ -6,22 +6,19 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, url: socialData.github, label: 'GitHub' },
     { icon: FaLinkedin, url: socialData.linkedin, label: 'LinkedIn' },
-    { icon: FaTwitter, url: socialData.twitter, label: 'Twitter' },
     { icon: FaEnvelope, url: `mailto:${socialData.email}`, label: 'Email' },
   ];
 
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark-secondary border-t border-dark-accent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-dark-secondary/60 backdrop-blur-sm border-t border-dark-accent relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-gradient mb-4">Portfolio</h3>
-            <p className="text-gray-400 text-sm">
-              Building the web, one project at a time.
-            </p>
+            <h3 className="text-2xl font-bold text-gradient mb-4">Lucas Stone's Portfolio</h3>
+
           </div>
 
           {/* Quick Links */}
@@ -66,7 +63,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-dark-accent text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} Portfolio. All rights reserved.
+            &copy; {currentYear} Lucas Stone.
           </p>
         </div>
       </div>
