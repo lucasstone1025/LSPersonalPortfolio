@@ -9,6 +9,7 @@ const Skills = () => {
     { title: 'Frontend', data: skills.frontend },
     { title: 'Backend', data: skills.backend },
     { title: 'Tools & Technologies', data: skills.tools },
+    { title: 'AI & Workflow', data: skills.ai },
   ];
 
   return (

@@ -7,5 +7,5 @@ export const aboutData = {
     "Building projects to learn and grow",
     "Open to collaboration and new opportunities",
   ],
-  currentFocus: "Currently focusing on mastering finishing up my last semester of my bachelors degree from FSU and either continuing onto a Masters degree or entering the workforce as a full stack developer or as a data engineer. I am always excited to take on new challenges and build meaningful projects.",
+  currentFocus: "Currently focusing on finishing up my last semester of my bachelors degree from FSU and either continuing onto a Masters degree or entering the workforce as a full stack developer or as a data engineer. I am always excited to take on new challenges and build meaningful projects.",
 };

@@ -14,7 +14,7 @@ export const educationData = {
     "Computer Networks",
     "Advanced Artificial Intelligence",
     "Linear Algebra",
-    "Discrete Mathematics",
+    "Discrete Mathematics I/II",
     "Computer Organization and Architecture",
   ],
   achievements: [
