@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React and Vite, featuring smoo
 
 ## Live Site
 
-[lucasstone.co](https://lucasstone.co)
+[lucasstone.xyz](https://lucasstone.xyz)
 
 ## Features
 
