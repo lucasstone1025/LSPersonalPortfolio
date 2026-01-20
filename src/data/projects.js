@@ -33,7 +33,7 @@ export const projects = [
     image: "/portfolio_image.png",
     techStack: ["React", "Tailwind CSS", "Vite"],
     githubUrl: "https://github.com/lucasstone1025/LSPersonalPortfolio",
-    liveUrl: "https://www.lucasstone.xyz",
+    liveUrl: "https://www.lucasastone.com",
     featured: false,
     longDescription: [
       "This portfolio website serves as a comprehensive showcase of my technical skills, projects, and professional background. Built with modern web development practices, it demonstrates proficiency in React ecosystem tools and responsive design principles.",
