@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +18,46 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle hash navigation when returning to home page
+  useEffect(() => {
+    if (isHomePage && location.hash) {
+      const sectionId = location.hash.substring(1); // Remove the #
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offset = 64; // Navbar height
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, [isHomePage, location.hash]);
+
+  const handleNavClick = (sectionId) => {
+    if (!isHomePage) {
+      // If not on home page, navigate to home with hash
+      navigate(`/#${sectionId}`);
+      // The hash will be handled by the browser, but we'll also ensure scrolling happens
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offset = 64; // Navbar height
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 200);
+    }
+    setIsOpen(false);
+  };
 
   const navLinks = [
     { name: 'Home', to: 'hero' },
@@ -33,30 +77,49 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link
-            to="hero"
-            smooth={true}
-            duration={500}
-            className="text-2xl font-bold text-gradient cursor-pointer"
-          >
-            Lucas Stone's Portfolio
-          </Link>
+          {isHomePage ? (
+            <ScrollLink
+              to="hero"
+              smooth={true}
+              duration={500}
+              className="text-2xl font-bold text-gradient cursor-pointer"
+            >
+              Lucas Stone's Portfolio
+            </ScrollLink>
+          ) : (
+            <RouterLink
+              to="/"
+              className="text-2xl font-bold text-gradient cursor-pointer"
+            >
+              Lucas Stone's Portfolio
+            </RouterLink>
+          )}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-64}
-                activeClass="text-primary-500"
-                className="text-gray-300 hover:text-white cursor-pointer transition-colors duration-300"
-              >
-                {link.name}
-              </Link>
+              isHomePage ? (
+                <ScrollLink
+                  key={link.to}
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-64}
+                  activeClass="text-primary-500"
+                  className="text-gray-300 hover:text-white cursor-pointer transition-colors duration-300"
+                >
+                  {link.name}
+                </ScrollLink>
+              ) : (
+                <button
+                  key={link.to}
+                  onClick={() => handleNavClick(link.to)}
+                  className="text-gray-300 hover:text-white cursor-pointer transition-colors duration-300"
+                >
+                  {link.name}
+                </button>
+              )
             ))}
           </div>
 
@@ -75,19 +138,29 @@ const Navbar = () => {
         <div className="md:hidden bg-dark-secondary border-t border-dark-accent">
           <div className="px-4 py-4 space-y-4">
             {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-64}
-                activeClass="text-primary-500"
-                className="block text-gray-300 hover:text-white cursor-pointer transition-colors duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
+              isHomePage ? (
+                <ScrollLink
+                  key={link.to}
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-64}
+                  activeClass="text-primary-500"
+                  className="block text-gray-300 hover:text-white cursor-pointer transition-colors duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </ScrollLink>
+              ) : (
+                <button
+                  key={link.to}
+                  onClick={() => handleNavClick(link.to)}
+                  className="block text-gray-300 hover:text-white cursor-pointer transition-colors duration-300 w-full text-left"
+                >
+                  {link.name}
+                </button>
+              )
             ))}
           </div>
         </div>
