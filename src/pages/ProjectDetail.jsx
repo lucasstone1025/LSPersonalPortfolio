@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft } from 'react-icons/fa';
 import { projects } from '../data/projects';
 import Button from '../components/ui/Button';
+import ImageCarousel from '../components/ui/ImageCarousel';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -33,26 +34,34 @@ const ProjectDetail = () => {
         </button>
       </div>
 
-      {/* Hero Image */}
+      {/* Hero Image / Carousel */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12"
       >
-        <div className="relative overflow-hidden rounded-2xl aspect-video bg-dark-accent">
-          {project.image ? (
+        {project.images && project.images.length > 0 ? (
+          <ImageCarousel 
+            images={project.images} 
+            imageFit={project.imageFit || 'cover'}
+            alt={project.title}
+          />
+        ) : project.image ? (
+          <div className="relative overflow-hidden rounded-2xl aspect-video bg-dark-accent">
             <img
               src={project.image}
               alt={project.title}
               className={`w-full h-full ${project.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
             />
-          ) : (
+          </div>
+        ) : (
+          <div className="relative overflow-hidden rounded-2xl aspect-video bg-dark-accent">
             <div className="w-full h-full flex items-center justify-center">
               <span className="text-gray-500 text-9xl font-bold">{project.title[0]}</span>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </motion.div>
 
       {/* Project Info */}

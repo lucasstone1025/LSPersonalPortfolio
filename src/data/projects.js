@@ -4,7 +4,13 @@ export const projects = [
     title: "TrendTracker",
     description: "An all-in-one finance management platform for tracking stocks, managing budgets, and achieving financial goals. Features real-time market data, bank account integration via Plaid API, and comprehensive budget analytics.",
     image: "/trendtracker_image.png",
-    imageFit: "cover", // "cover" fills space, "contain" shows full image
+    images: [
+      "/trendtracker_image.png",
+      "/trendtracker_image_2.png",
+      "/trendtracker_image_3.png",
+      "/trendtracker_image_4.png",
+    ],
+    imageFit: "contain", // "cover" fills space, "contain" shows full image
     techStack: ["React 19", "Node.js 22", "Express 5", "PostgreSQL 15", "Plaid API", "Python", "Docker", "Twilio", "Finnhub API"],
     githubUrl: "https://github.com/lucasstone1025/Stock-Portfolio-Tracker",
     liveUrl: "https://www.trendtracker.co",

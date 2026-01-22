@@ -14,9 +14,9 @@ const ProjectCard = ({ project }) => {
       {/* Project Image */}
       <Link to={`/project/${project.id}`}>
         <div className="relative overflow-hidden aspect-video cursor-pointer bg-dark-accent">
-          {project.image ? (
+          {(project.images && project.images.length > 0) || project.image ? (
             <img
-              src={project.image}
+              src={(project.images && project.images.length > 0) ? project.images[0] : project.image}
               alt={project.title}
               className={`w-full h-full ${project.imageFit === 'contain' ? 'object-contain group-hover:scale-105' : 'object-cover group-hover:scale-110'} transition-transform duration-300`}
             />
