@@ -21,6 +21,7 @@ export const educationData = {
     "Dean's List - Fall 2025",
     "Participated in UROP (Undergraduate Research Opportunities Program) @ FSU (See Projects Section)",
     "Member of ACM and AWS Cloud Club",
+    "Fall 2025/Spring 2026 ACM Programming Contest Question Writer"
   ],
   certifications: [
     {
