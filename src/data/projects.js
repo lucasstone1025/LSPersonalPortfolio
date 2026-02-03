@@ -3,12 +3,12 @@ export const projects = [
     id: 1,
     title: "TrendTracker",
     description: "An all-in-one finance management platform for tracking stocks, managing budgets, and achieving financial goals. Features real-time market data, bank account integration via Plaid API, and comprehensive budget analytics.",
-    image: "/trendtracker_image.png",
+    image: "/trendtracker_image.webp",
     images: [
-      "/trendtracker_image.png",
-      "/trendtracker_image_2.png",
-      "/trendtracker_image_3.png",
-      "/trendtracker_image_4.png",
+      "/trendtracker_image.webp",
+      "/trendtracker_image_2.webp",
+      "/trendtracker_image_3.webp",
+      "/trendtracker_image_4.webp",
     ],
     imageFit: "contain", // "cover" fills space, "contain" shows full image
     techStack: ["React 19", "Node.js 22", "Express 5", "PostgreSQL 15", "Plaid API", "Python", "Docker", "Twilio", "Finnhub API"],
@@ -61,7 +61,7 @@ export const projects = [
     id: 3,
     title: "Computationally Exploring the Lowest-Energy Structures of Boron Nitride (Undergraduate Research)",
     description: "Leveraged Particle Swarm Optimization and Python to solve high-dimensional structural discovery problems, predicting stable atomic configurations for advanced materials.",
-    image: "/project2_image.png",
+    image: "/project2_image.webp",
     imageFit: "contain", // Shows full poster without cropping
     techStack: ["Python", "Linux", "High Performance Computing (HPC)"],
     featured: false,

@@ -10,7 +10,15 @@
       "Bash(npm uninstall:*)",
       "Bash(cat:*)",
       "Bash(find:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(cwebp:*)",
+      "Bash(convert:*)",
+      "Bash(magick:*)",
+      "Bash(node:*)",
+      "Bash(npx vite build:*)",
+      "Bash(du:*)"
     ]
   }
 }

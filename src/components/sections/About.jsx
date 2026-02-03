@@ -30,6 +30,7 @@ const About = () => {
                     <img
                       src={aboutData.photo}
                       alt="Profile"
+                      loading="lazy"
                       className="w-full h-full object-cover rounded-2xl"
                     />
                   ) : (

@@ -18,6 +18,7 @@ const ProjectCard = ({ project }) => {
             <img
               src={(project.images && project.images.length > 0) ? project.images[0] : project.image}
               alt={project.title}
+              loading="lazy"
               className={`w-full h-full ${project.imageFit === 'contain' ? 'object-contain group-hover:scale-105' : 'object-cover group-hover:scale-110'} transition-transform duration-300`}
             />
           ) : (

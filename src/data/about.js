@@ -1,5 +1,5 @@
 export const aboutData = {
-  photo: "/headshot.jpg", // Add your headshot image here (or set to null to use emoji)
+  photo: "/headshot.webp",
   bio: "CS student at FSU transitioning into data engineering and data science. I build full-stack applications and work with data pipelines, currently exploring ML through hands-on projects.",
   highlights: [
     "Built TrendTracker - a stock portfolio tracker with Python-based analysis",
