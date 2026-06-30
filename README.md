@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React and Vite, featuring smoo
 
 ## Live Site
 
-[lucasstone.xyz](https://lucasstone.xyz)
+[lucasastone.com](https://lucasastone.com)
 
 ## Features
 
@@ -13,6 +13,8 @@ A modern, responsive portfolio website built with React and Vite, featuring smoo
 - **Interactive Star Field** - Dynamic space-themed background
 - **Project Showcase** - Detailed project pages with tech stacks
 - **Skills Display** - Categorized technical skills with icons
+- **Professional Experience** - Detailed timeline of work history
+- **Education Timeline** - Academic background and certifications
 - **Contact Form** - Working email form via EmailJS
 - **Smooth Navigation** - Single-page scroll with section highlighting
 
@@ -79,9 +81,9 @@ src/
 ├── components/
 │   ├── backgrounds/    # StarField, EarthElement
 │   ├── layout/         # Navbar, Footer, Layout
-│   ├── sections/       # Hero, About, Projects, Skills, Contact
+│   ├── sections/       # Hero, About, Projects, Skills, Experience, Education, Contact
 │   └── ui/             # Button, ProjectCard, SkillCard
-├── data/               # Static content (projects, skills, education)
+├── data/               # Static content (projects, skills, experience, education, etc.)
 ├── pages/              # Home, ProjectDetail
 ├── App.jsx
 └── main.jsx
@@ -93,6 +95,7 @@ src/
 
 Edit the data files in `/src/data/`:
 - `about.js` - Bio and highlights
+- `experience.js` - Professional experience
 - `projects.js` - Project details
 - `skills.js` - Technical skills
 - `education.js` - Education and certifications
