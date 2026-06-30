@@ -38,7 +38,7 @@ export const projects = [
     id: 2,
     title: "Portfolio Website",
     description: "A modern, fully responsive portfolio website built with React and Tailwind CSS, featuring smooth animations, dynamic routing, and integrated contact functionality.",
-    image: "/portfolio_image.png",
+    image: "/project3_image.png",
     techStack: ["React", "Tailwind CSS", "Vite"],
     githubUrl: "https://github.com/lucasstone1025/LSPersonalPortfolio",
     liveUrl: "https://www.lucasastone.com",

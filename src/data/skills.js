@@ -1,35 +1,33 @@
 export const skills = {
-  languages: [
-    { name: "JavaScript", icon: "SiJavascript" },
+  infrastructure: [
+    { name: "Active Directory", icon: "SiBookstack" },
+    { name: "Microsoft Azure", icon: "Si365Datascience" },
+    { name: "AWS", icon: "SiAmazonwebservices" },
+    { name: "Windows Server", icon: "SiWindows" },
+    { name: "Linux", icon: "SiLinux" },
+  ],
+  scripting: [
+    { name: "PowerShell", icon: "SiPurescript" },
     { name: "Python", icon: "SiPython" },
-    { name: "C++", icon: "SiCplusplus" },
-    { name: "HTML5", icon: "SiHtml5" },
-    { name: "CSS3", icon: "SiCss3" },
-    { name: "C#", icon: "SiCsharp" },
-    { name: "C", icon: "SiC" },
+    { name: "Bash", icon: "SiGnubash" },
+    { name: "JavaScript", icon: "SiJavascript" },
   ],
-  frontend: [
-    { name: "React", icon: "SiReact" },
-    { name: "Tailwind CSS", icon: "SiTailwindcss" },
-    { name: "Vite", icon: "SiVite" },
-  ],
-  backend: [
-    { name: "Node.js", icon: "SiNodedotjs" },
-    { name: "Express", icon: "SiExpress" },
-    { name: "MongoDB", icon: "SiMongodb" },
+  databases: [
     { name: "PostgreSQL", icon: "SiPostgresql" },
+    { name: "MongoDB", icon: "SiMongodb" },
+    { name: "SQL", icon: "SiMysql" }, 
+  ],
+  support: [
+    { name: "ConnectWise", icon: "SiLivechat" },
+    { name: "NinjaOne MDM", icon: "SiAndroid" },
+    { name: "SimpleOne MDM", icon: "SiApple" },
+    { name: "Deskside Support", icon: "SiHandshake" },
+    { name: "Ticket Triage", icon: "SiJira" },
   ],
   tools: [
+    { name: "Microsoft 365", icon: "SiMicrosoftoffice" },
+    { name: "Hardware Repair", icon: "SiIntel" },
     { name: "Git", icon: "SiGit" },
-    { name: "GitHub", icon: "SiGithub" },
-    { name: "npm", icon: "SiNpm" },
     { name: "Docker", icon: "SiDocker" },
-    { name: "Linux", icon: "SiLinux" },
-    { name: "Postman", icon: "SiPostman" },
-  ],
-  ai: [
-    { name: "Claude", icon: "SiAnthropic" },
-    { name: "ChatGPT", icon: "SiOpenai" },
-    { name: "GitHub Copilot", icon: "SiGithub" },
   ],
 };

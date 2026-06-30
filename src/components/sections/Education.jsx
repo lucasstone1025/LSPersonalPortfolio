@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import SectionTitle from '../ui/SectionTitle';
 import { educationData } from '../../data/education';
 import { HiAcademicCap, HiLocationMarker, HiCalendar, HiStar, HiBadgeCheck } from 'react-icons/hi';
+import { FaAws } from 'react-icons/fa';
 import EarthElement from '../backgrounds/EarthElement';
 
 const Education = () => {
@@ -96,7 +97,13 @@ const Education = () => {
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex items-start gap-3 flex-1">
-                          <HiBadgeCheck className="text-2xl text-accent-cyan flex-shrink-0 mt-1 group-hover:text-primary-500 transition-colors" />
+                          {cert.iconType === 'react-icons' && cert.iconName === 'aws' ? (
+                            <FaAws className="text-3xl text-[#FF9900] flex-shrink-0 mt-1 transition-colors" />
+                          ) : cert.iconType === 'image' && cert.iconPath ? (
+                            <img src={cert.iconPath} alt={cert.name} className="w-8 h-8 object-contain flex-shrink-0 mt-1" />
+                          ) : (
+                            <HiBadgeCheck className="text-2xl text-accent-cyan flex-shrink-0 mt-1 group-hover:text-primary-500 transition-colors" />
+                          )}
                           <div>
                             <h5 className="text-white font-semibold mb-1">{cert.name}</h5>
                             <p className="text-gray-400 text-sm mb-1">{cert.issuer}</p>

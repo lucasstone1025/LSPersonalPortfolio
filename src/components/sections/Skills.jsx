@@ -5,11 +5,11 @@ import { skills } from '../../data/skills';
 
 const Skills = () => {
   const categories = [
-    { title: 'Languages', data: skills.languages },
-    { title: 'Frontend', data: skills.frontend },
-    { title: 'Backend', data: skills.backend },
-    { title: 'Tools & Technologies', data: skills.tools },
-    { title: 'AI & Workflow', data: skills.ai },
+    { title: 'Infrastructure', data: skills.infrastructure },
+    { title: 'Scripting', data: skills.scripting },
+    { title: 'Databases', data: skills.databases },
+    { title: 'Support', data: skills.support },
+    { title: 'Tools', data: skills.tools },
   ];
 
   return (

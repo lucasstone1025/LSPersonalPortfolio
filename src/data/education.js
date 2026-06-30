@@ -19,7 +19,7 @@ export const educationData = {
   ],
   achievements: [
     "Dean's List - Fall 2025",
-    "Participated in UROP (Undergraduate Research Opportunities Program) @ FSU (See Projects Section)",
+    "Participated in UROP (Undergraduate Research Opportunities Program) @ FSU ",
     "Member of ACM and AWS Cloud Club",
     "Fall 2025/Spring 2026 ACM Programming Contest Question Writer"
   ],
@@ -28,7 +28,17 @@ export const educationData = {
       name: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services (AWS)",
       date: "October 2025",
-      credentialUrl: "https://www.credly.com/badges/656e6c9e-5f0d-4185-8b2d-2bfbd5fa79fb/linked_in_profile", 
+      credentialUrl: "https://www.credly.com/badges/656e6c9e-5f0d-4185-8b2d-2bfbd5fa79fb/linked_in_profile",
+      iconType: "react-icons",
+      iconName: "aws"
+    },
+    {
+      name: "CompTIA A+",
+      issuer: "CompTIA",
+      date: "June 2026",
+      credentialUrl: "https://www.credly.com/badges/afe6ba7b-bd66-434e-8e25-418fb0f2ac98/public_url",
+      iconType: "image",
+      iconPath: "/logos/comptia-a-plus.svg" 
     },
   ],
 };

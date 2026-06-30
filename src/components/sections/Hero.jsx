@@ -48,7 +48,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Full-Stack Developer
+            IT Administrator & Systems Analyst
           </motion.p>
 
           <motion.p
@@ -58,7 +58,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            I am Passionate about learning and growing as a developer, learning new technologies and building projects to expand my skillset.
+            I am currently working in corporate IT, handling everything from device management to deskside support. 
           </motion.p>
 
           <motion.div

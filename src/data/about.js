@@ -1,11 +1,12 @@
 export const aboutData = {
   photo: "/headshot.webp",
-  bio: "CS student at FSU transitioning into data engineering and data science. I build full-stack applications and work with data pipelines, currently exploring ML through hands-on projects.",
+  bio: "I am a Florida State University Computer Science grad who enjoys practical work and environments where I can build networks, fix devices, and keep business systems running smoothly.",
   highlights: [
-    "Built TrendTracker - a stock portfolio tracker with Python-based analysis",
-    "Final semester CS student at FSU, applying to data science master's programs",
-    "Computational materials research using particle swarm optimization and HPC (UROP 2024-2025)",
-    "Seeking Summer 2026 internships in data engineering, full-stack development, or related fields",
+    "IT Helpdesk Intern managing corporate device support and daily ticket triage",
+    "AWS Certified Cloud Practitioner and CompTIA A+ Certified",
+    "Experienced in self hosting applications and databases on custom Linux hardware",
+    "Actively seeking full time Systems Analyst or IT Administration roles in Jacksonville, FL",
   ],
-  currentFocus: "I'm wrapping up my B.S. in Computer Science at FSU this semester before starting a Master's in Interdisciplinary Data Science. Currently seeking a Summer 2026 internship in data engineering or related fields where I can apply my experience with Python, data analysis, and full-stack development.",
+  currentFocus: "Right now, I am working as an IT Intern, doing everything from managing Active Directory to providing direct deskside support. I have gained experience in MDM Management, Hardware setup, Onboarding and Offboarding employees, Printer troubleshooting, and various technical troubleshooting.",
 };
+
